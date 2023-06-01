@@ -1,0 +1,46 @@
+.container {
+  text-align: center;
+}
+
+.menu {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: blueviolet;
+  height: 100%;
+  width: 20%;
+  padding-top: 1rem;
+}
+
+.links {
+  margin-top: 3rem;
+}
+
+.header {
+  position: fixed;
+  background-color: antiquewhite;
+  width: 80vw;
+  height: 3rem;
+  top: 0%;
+  right: 0%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  width: 80vw;
+  background-color: black;
+  color: aliceblue;
+}
+
+.main {
+  position: fixed;
+  right: 0%;
+  top: 8em;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
