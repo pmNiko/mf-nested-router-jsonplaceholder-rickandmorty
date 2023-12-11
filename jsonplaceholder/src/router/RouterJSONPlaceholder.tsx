@@ -13,7 +13,7 @@ const Todos = lazy(() => import("../pages/Todos"));
 const Comments = lazy(() => import("../pages/Comments"));
 const Users = lazy(() => import("../pages/Users"));
 
-const RouterBlog = ({ pathname = "" }: { pathname?: string }) => {
+const RouterJSONPlaceholder = ({ pathname = "" }: { pathname?: string }) => {
   const router = createBrowserRouter([
     {
       path: `${pathname}/jsonplaceholder`,
@@ -49,4 +49,4 @@ const RouterBlog = ({ pathname = "" }: { pathname?: string }) => {
   return <RouterProvider router={router} />;
 };
 
-export default RouterBlog;
+export default RouterJSONPlaceholder;

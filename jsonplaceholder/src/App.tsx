@@ -1,7 +1,7 @@
 import "./App.css";
-import { RouterBlog } from "./router";
+import { RouterJSONPlaceholder } from "./router";
 
 function App() {
-  return <RouterBlog pathname="" />;
+  return <RouterJSONPlaceholder pathname="" />;
 }
 export default App;

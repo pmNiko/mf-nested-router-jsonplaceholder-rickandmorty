@@ -7,12 +7,13 @@ const CardContent = ({ pathname }: { pathname: string }) => {
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
+        marginTop: "2.5em",
       }}
     >
-      <h4>Microfrontend Blog</h4>
+      <h4>Microfrontend JSONPlaceholder</h4>
       <NavLink
-        style={{ marginBottom: "1em" }}
-        to={`${pathname}/jsonplaceholder`}
+        style={{ marginTop: "2em", marginBottom: "1em" }}
+        to={`/${pathname}/jsonplaceholder`}
       >
         Home
       </NavLink>
@@ -21,14 +22,15 @@ const CardContent = ({ pathname }: { pathname: string }) => {
           display: "flex",
           justifyContent: "center",
           gap: 50,
+          marginBottom: "2em",
         }}
       >
-        <NavLink to={`${pathname}/jsonplaceholder/todos`}>Tareas</NavLink>
-        <NavLink to={`${pathname}/jsonplaceholder/posts`}>Posts</NavLink>
-        <NavLink to={`${pathname}/jsonplaceholder/comments`}>
+        <NavLink to={`/${pathname}/jsonplaceholder/todos`}>Tareas</NavLink>
+        <NavLink to={`/${pathname}/jsonplaceholder/posts`}>Posts</NavLink>
+        <NavLink to={`/${pathname}/jsonplaceholder/comments`}>
           Comentarios
         </NavLink>
-        <NavLink to={`${pathname}/jsonplaceholder/users`}>Usuarios</NavLink>
+        <NavLink to={`/${pathname}/jsonplaceholder/users`}>Usuarios</NavLink>
       </nav>
       <Outlet />
     </div>

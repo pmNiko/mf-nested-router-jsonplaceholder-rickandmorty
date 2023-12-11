@@ -1,8 +1,11 @@
-import { NavLink, createBrowserRouter } from "react-router-dom";
-import { PublicLayout } from "../layout/PublicLayout";
 import { lazy } from "react";
+import { createBrowserRouter } from "react-router-dom";
+import { PublicLayout } from "../layout/PublicLayout";
+import Home from "../pages/Home";
 
-const Blog = lazy(() => import("blog/Blog"));
+const RouterJSONPlaceholder = lazy(
+  () => import("jsonplaceholder/RouterJSONPlaceholder")
+);
 const Characters = lazy(() => import("characters/Characters"));
 
 export const router = createBrowserRouter([
@@ -11,8 +14,12 @@ export const router = createBrowserRouter([
     element: <PublicLayout />,
     children: [
       {
-        path: "blog/*",
-        element: <Blog pathname="shell" />,
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "jsonplaceholder/*",
+        element: <RouterJSONPlaceholder pathname="shell" />,
       },
       {
         path: "characters/*",

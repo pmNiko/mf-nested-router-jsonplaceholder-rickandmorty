@@ -19,12 +19,9 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       federation({
-        name: "blog",
+        name: "jsonplaceholder",
         exposes: {
-          "./Blog": "./src/router/RouterBlog",
-        },
-        remotes: {
-          // componentsMunisma: `${env.REMOTE_COMPONENTS_URI}`,
+          "./RouterJSONPlaceholder": "./src/router/RouterJSONPlaceholder",
         },
         shared: ["react", "react-dom"],
       }),

@@ -1,3 +1,3 @@
-import RouterBlog from "./RouterBlog";
+import RouterJSONPlaceholder from "./RouterJSONPlaceholder";
 
-export { RouterBlog };
+export { RouterJSONPlaceholder };

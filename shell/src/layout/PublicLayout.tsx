@@ -11,8 +11,8 @@ export const PublicLayout = () => {
             Shell
           </NavLink>
 
-          <NavLink className="nav-links" to="/shell/blog/home">
-            Blog
+          <NavLink className="nav-links" to="/shell/jsonplaceholder">
+            JSONPlaceholder
           </NavLink>
 
           <NavLink className="nav-links" to="/shell/characters">

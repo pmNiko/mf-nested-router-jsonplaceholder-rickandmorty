@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
         name: "shell",
         exposes: {},
         remotes: {
-          blog: "http://localhost:4173/assets/remoteEntry.js",
+          jsonplaceholder: "http://localhost:4173/assets/remoteEntry.js",
           characters: "http://localhost:4174/assets/remoteEntry.js",
         },
         shared: ["react", "react-dom"],
