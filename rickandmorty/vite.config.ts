@@ -19,9 +19,9 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       federation({
-        name: "characters",
+        name: "rickandmorty",
         exposes: {
-          "./Characters": "./src/router/CharactersRouter",
+          "./RickAndMortyRouter": "./src/router/RickAndMortyRouter",
         },
         remotes: {},
         shared: ["react", "react-dom"],

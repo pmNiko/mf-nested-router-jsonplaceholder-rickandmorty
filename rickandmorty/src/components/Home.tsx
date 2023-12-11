@@ -1,9 +1,7 @@
-import { NavLink } from "react-router-dom";
-
 const Home = () => {
   return (
     <div style={{ width: "40%", margin: "auto" }}>
-      <h4>Home del MF JSONPlaceholder</h4>
+      <h4>Home del MF Rick And Morty</h4>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nostrum
