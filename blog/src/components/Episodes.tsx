@@ -1,14 +1,14 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 import { Episode } from "../interfaces/Episode";
 
-const Episodes = () => {
+const Episodes = ({ pathname }: { pathname: string }) => {
   const episodes = useLoaderData() as Episode[];
 
   return (
     <div>
       <h4>Episodes</h4>
 
-      <NavLink to="/shell/blog/home">Ir al home</NavLink>
+      <NavLink to={`/${pathname}/blog/home`}>Ir al home</NavLink>
 
       {episodes.length > 0 ? (
         episodes.map((episode) => <li>{episode.name}</li>)

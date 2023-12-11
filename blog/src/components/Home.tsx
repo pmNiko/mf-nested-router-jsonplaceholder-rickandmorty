@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ pathname }: { pathname: string }) => {
   return (
     <div>
       <h4>Home de la página</h4>
 
-      <NavLink to="/shell/blog/episodes">Ir a los Episodios</NavLink>
+      <NavLink to={`/${pathname}/blog/episodes`}>Ir a los Episodios</NavLink>
 
       <ul>
         <li>Elemento 1</li>

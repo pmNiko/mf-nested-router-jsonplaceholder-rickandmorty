@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { NavLink, createBrowserRouter } from "react-router-dom";
 import { PublicLayout } from "../layout/PublicLayout";
 import { lazy } from "react";
 
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "blog/*",
-        element: <Blog />,
+        element: <Blog pathname="shell" />,
       },
       {
         path: "characters/*",

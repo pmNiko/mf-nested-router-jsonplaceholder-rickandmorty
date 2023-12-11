@@ -7,17 +7,15 @@ export const PublicLayout = () => {
       <div className="menu">
         <p>Menu</p>
         <div className="links">
-          <NavLink to="/shell" style={{ color: "white" }}>
+          <NavLink className="nav-links" to="/shell">
             Shell
           </NavLink>
-          <br />
-          <br />
-          <NavLink to="blog/home" style={{ color: "white" }}>
+
+          <NavLink className="nav-links" to="/shell/blog/home">
             Blog
           </NavLink>
-          <br />
-          <br />
-          <NavLink to="characters" style={{ color: "white" }}>
+
+          <NavLink className="nav-links" to="/shell/characters">
             Characters
           </NavLink>
         </div>
@@ -30,8 +28,6 @@ export const PublicLayout = () => {
 
         <Outlet />
       </div>
-
-      <div className="footer">Footer de la página</div>
     </div>
   );
 };
