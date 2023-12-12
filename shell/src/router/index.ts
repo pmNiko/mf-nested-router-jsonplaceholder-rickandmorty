@@ -1,7 +1,7 @@
 export enum Paths {
   INDEX = "/shell",
   JSONPLACEHOLDER = "jsonplaceholder",
-  RICK_AND_MORTY = "ricandmorty",
+  RICK_AND_MORTY = "rickandmorty",
 }
 
 export const Routes = {

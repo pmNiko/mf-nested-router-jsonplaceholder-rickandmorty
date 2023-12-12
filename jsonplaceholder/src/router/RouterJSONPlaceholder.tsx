@@ -65,7 +65,7 @@ const RouterJSONPlaceholder = ({ pathname = "" }: { pathname?: string }) => {
         ],
       },
     ],
-    { basename: "" }
+    { basename: import.meta.env.VITE_BASENAME_JSONPLACEHOLDER }
   );
   return <RouterProvider router={router} />;
 };

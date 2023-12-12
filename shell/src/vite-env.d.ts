@@ -1,4 +1,4 @@
 /// <reference types="vite/client" />
 
-declare module "jsonplaceholder/*";
-declare module "characters/*";
+declare module "mf-jsonplaceholder/*";
+declare module "mf-rickandmorty/*";

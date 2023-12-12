@@ -51,7 +51,7 @@ const RickAndMortyRouter = ({ pathname = "" }: { pathname?: string }) => {
       },
     ],
     {
-      basename: "",
+      basename: import.meta.env.VITE_BASENAME_RICKANDMORTY,
     }
   );
   return <RouterProvider router={router} />;

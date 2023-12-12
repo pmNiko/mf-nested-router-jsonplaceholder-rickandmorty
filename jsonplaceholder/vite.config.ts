@@ -1,41 +1,30 @@
 import { defineConfig, loadEnv } from "vite";
-import react from "@vitejs/plugin-react-swc";
 import federation from "@originjs/vite-plugin-federation";
+import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv("mock", process.cwd(), "");
-  const processEnvValues = {
-    "process.env": Object.entries(env).reduce((prev, [key, val]) => {
-      console.log(key, val);
-      return {
-        ...prev,
-        [key]: val,
-      };
-    }, {}),
-  };
+  Object.assign(process.env, loadEnv(mode, process.cwd(), ""));
 
   return {
-    base: "./",
     plugins: [
       react(),
       federation({
-        name: "jsonplaceholder",
+        name: "mf-jsonplaceholder",
+        filename: "mf-jsonplaceholder-entry.js",
+        shared: ["react", "react-dom"],
         exposes: {
           "./RouterJSONPlaceholder": "./src/router/RouterJSONPlaceholder",
         },
-        shared: ["react", "react-dom"],
+        remotes: {},
       }),
     ],
-
-    define: processEnvValues,
-    server: {
-      port: 3000,
-    },
     build: {
       modulePreload: false,
       target: "esnext",
       minify: false,
       cssCodeSplit: false,
     },
+
+    base: process.env.VITE_BASENAME_JSONPLACEHOLDER,
   };
 });

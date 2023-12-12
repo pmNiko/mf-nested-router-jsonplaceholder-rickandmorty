@@ -1,13 +1,15 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { PublicLayout } from "../layout/PublicLayout";
 import Home from "../pages/Home";
 import { Routes } from "./index";
 
 const RouterJSONPlaceholder = lazy(
-  () => import("jsonplaceholder/RouterJSONPlaceholder")
+  () => import("mf-jsonplaceholder/RouterJSONPlaceholder")
 );
-const Characters = lazy(() => import("characters/Characters"));
+const RickAndMortyRouter = lazy(
+  () => import("mf-rickandmorty/RickAndMortyRouter")
+);
 
 export const router = createBrowserRouter(
   [
@@ -21,16 +23,24 @@ export const router = createBrowserRouter(
         },
         {
           path: Routes.jsonplaceholder.routerPath,
-          element: <RouterJSONPlaceholder pathname={Routes.index.routerPath} />,
+          element: (
+            <Suspense fallback={<p>Cargando...</p>}>
+              <RouterJSONPlaceholder pathname={Routes.index.routerPath} />,
+            </Suspense>
+          ),
         },
         {
           path: Routes.rickAndMorty.routerPath,
-          element: <Characters />,
+          element: (
+            <Suspense fallback={<p>Cargando...</p>}>
+              <RickAndMortyRouter pathname={Routes.index.routerPath} />,
+            </Suspense>
+          ),
         },
       ],
     },
   ],
   {
-    basename: "",
+    basename: import.meta.env.VITE_BASENAME_SHELL,
   }
 );
