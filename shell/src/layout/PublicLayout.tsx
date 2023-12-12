@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
-import "./PublicLayout.css";
 import { Routes } from "../router";
+import "./PublicLayout.css";
 
 export const PublicLayout = () => {
   return (

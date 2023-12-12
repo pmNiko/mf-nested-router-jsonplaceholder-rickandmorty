@@ -11,14 +11,12 @@ export const Routes = {
   },
   jsonplaceholder: {
     label: "JSON Placeholder",
-    routerPath: Paths.JSONPLACEHOLDER + "/*",
-    relativePath: Paths.JSONPLACEHOLDER,
+    routerPath: Paths.JSONPLACEHOLDER,
     absolutePath: Paths.INDEX + "/" + Paths.JSONPLACEHOLDER,
   },
   rickAndMorty: {
     label: "Rick and Morty",
-    routerPath: Paths.RICK_AND_MORTY + "/*",
-    relativePath: Paths.RICK_AND_MORTY,
+    routerPath: Paths.RICK_AND_MORTY,
     absolutePath: Paths.INDEX + "/" + Paths.RICK_AND_MORTY,
   },
 };
