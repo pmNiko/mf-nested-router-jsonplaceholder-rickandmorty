@@ -1,8 +1,4 @@
-import "./App.css";
 import RickAndMortyRouter from "./router/RickAndMortyRouter";
+import "./App.css";
 
-function App() {
-  return <RickAndMortyRouter />;
-}
-
-export default App;
+export default () => <RickAndMortyRouter />;

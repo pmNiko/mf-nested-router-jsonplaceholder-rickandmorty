@@ -1,6 +1,6 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { CardContent, Home } from "../components";
+import { CardContent } from "../components";
 import {
   loaderComments,
   loaderPosts,
@@ -8,6 +8,7 @@ import {
   loaderUsers,
 } from "../loaders";
 import { Routes } from "./index";
+import Home from "../pages/Home";
 
 const Posts = lazy(() => import("../pages/Posts"));
 const Todos = lazy(() => import("../pages/Todos"));
@@ -28,22 +29,38 @@ const RouterJSONPlaceholder = ({ pathname = "" }: { pathname?: string }) => {
           {
             path: Routes.todos.routerPath,
             loader: loaderTodos,
-            element: <Todos />,
+            element: (
+              <Suspense fallback={<span>Cargando...</span>}>
+                <Todos />,
+              </Suspense>
+            ),
           },
           {
             path: Routes.posts.routerPath,
             loader: loaderPosts,
-            element: <Posts />,
+            element: (
+              <Suspense fallback={<span>Cargando...</span>}>
+                <Posts />,
+              </Suspense>
+            ),
           },
           {
             path: Routes.comments.routerPath,
             loader: loaderComments,
-            element: <Comments />,
+            element: (
+              <Suspense fallback={<span>Cargando...</span>}>
+                <Comments />,
+              </Suspense>
+            ),
           },
           {
             path: Routes.users.routerPath,
             loader: loaderUsers,
-            element: <Users />,
+            element: (
+              <Suspense fallback={<span>Cargando...</span>}>
+                <Users />,
+              </Suspense>
+            ),
           },
         ],
       },

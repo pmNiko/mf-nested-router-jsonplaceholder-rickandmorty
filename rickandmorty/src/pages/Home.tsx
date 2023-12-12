@@ -1,4 +1,4 @@
-const Home = () => {
+export default () => {
   return (
     <div style={{ width: "40%", margin: "auto" }}>
       <h4>Home del MF Rick And Morty</h4>
@@ -20,5 +20,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

@@ -8,7 +8,7 @@ export enum Paths {
 
 export const Routes = {
   index: {
-    label: "Home del MF",
+    label: "Home",
     routerPath: Paths.INDEX,
   },
   todos: {

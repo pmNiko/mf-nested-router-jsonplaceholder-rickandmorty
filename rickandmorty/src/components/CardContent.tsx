@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { Routes } from "../router";
 
 const CardContent = ({ pathname }: { pathname: string }) => {
   return (
@@ -10,12 +11,12 @@ const CardContent = ({ pathname }: { pathname: string }) => {
         marginTop: "2.5em",
       }}
     >
-      <h4>Microfrontend JSONPlaceholder</h4>
+      <h4>Microfrontend Rick and Morty</h4>
       <NavLink
         style={{ marginTop: "2em", marginBottom: "1em" }}
-        to={`/${pathname}/jsonplaceholder`}
+        to={pathname + Routes.index.routerPath}
       >
-        Home
+        {Routes.index.label}
       </NavLink>
       <nav
         style={{
@@ -25,12 +26,15 @@ const CardContent = ({ pathname }: { pathname: string }) => {
           marginBottom: "2em",
         }}
       >
-        <NavLink to={`/${pathname}/jsonplaceholder/todos`}>Tareas</NavLink>
-        <NavLink to={`/${pathname}/jsonplaceholder/posts`}>Posts</NavLink>
-        <NavLink to={`/${pathname}/jsonplaceholder/comments`}>
-          Comentarios
+        <NavLink to={pathname + Routes.characters.absolutePath}>
+          {Routes.characters.label}
         </NavLink>
-        <NavLink to={`/${pathname}/jsonplaceholder/users`}>Usuarios</NavLink>
+        <NavLink to={pathname + Routes.episodes.absolutePath}>
+          {Routes.episodes.label}
+        </NavLink>
+        <NavLink to={pathname + Routes.locations.absolutePath}>
+          {Routes.locations.label}
+        </NavLink>
       </nav>
       <Outlet />
     </div>
