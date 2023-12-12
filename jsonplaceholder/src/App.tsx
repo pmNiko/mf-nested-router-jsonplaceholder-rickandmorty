@@ -1,7 +1,4 @@
+import RouterJSONPlaceholder from "./router/RouterJSONPlaceholder";
 import "./App.css";
-import { RouterJSONPlaceholder } from "./router";
 
-function App() {
-  return <RouterJSONPlaceholder pathname="" />;
-}
-export default App;
+export default () => <RouterJSONPlaceholder />;

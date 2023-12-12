@@ -7,6 +7,7 @@ import {
   loaderTodos,
   loaderUsers,
 } from "../loaders";
+import { Routes } from "./index";
 
 const Posts = lazy(() => import("../pages/Posts"));
 const Todos = lazy(() => import("../pages/Todos"));
@@ -14,38 +15,41 @@ const Comments = lazy(() => import("../pages/Comments"));
 const Users = lazy(() => import("../pages/Users"));
 
 const RouterJSONPlaceholder = ({ pathname = "" }: { pathname?: string }) => {
-  const router = createBrowserRouter([
-    {
-      path: `${pathname}/jsonplaceholder`,
-      element: <CardContent pathname={pathname} />,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-        {
-          path: "todos",
-          loader: loaderTodos,
-          element: <Todos />,
-        },
-        {
-          path: "posts",
-          loader: loaderPosts,
-          element: <Posts />,
-        },
-        {
-          path: "comments",
-          loader: loaderComments,
-          element: <Comments />,
-        },
-        {
-          path: "users",
-          loader: loaderUsers,
-          element: <Users />,
-        },
-      ],
-    },
-  ]);
+  const router = createBrowserRouter(
+    [
+      {
+        path: pathname + Routes.index.routerPath,
+        element: <CardContent pathname={pathname} />,
+        children: [
+          {
+            index: true,
+            element: <Home />,
+          },
+          {
+            path: Routes.todos.routerPath,
+            loader: loaderTodos,
+            element: <Todos />,
+          },
+          {
+            path: Routes.posts.routerPath,
+            loader: loaderPosts,
+            element: <Posts />,
+          },
+          {
+            path: Routes.comments.routerPath,
+            loader: loaderComments,
+            element: <Comments />,
+          },
+          {
+            path: Routes.users.routerPath,
+            loader: loaderUsers,
+            element: <Users />,
+          },
+        ],
+      },
+    ],
+    { basename: "" }
+  );
   return <RouterProvider router={router} />;
 };
 

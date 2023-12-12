@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "./PublicLayout.css";
+import { Routes } from "../router";
 
 export const PublicLayout = () => {
   return (
@@ -7,16 +8,19 @@ export const PublicLayout = () => {
       <div className="menu">
         <p>Menu</p>
         <div className="links">
-          <NavLink className="nav-links" to="/shell">
-            Shell
+          <NavLink className="nav-links" to={Routes.index.routerPath}>
+            {Routes.index.label}
           </NavLink>
 
-          <NavLink className="nav-links" to="/shell/jsonplaceholder">
-            JSONPlaceholder
+          <NavLink
+            className="nav-links"
+            to={Routes.jsonplaceholder.absolutePath}
+          >
+            {Routes.jsonplaceholder.label}
           </NavLink>
 
-          <NavLink className="nav-links" to="/shell/characters">
-            Characters
+          <NavLink className="nav-links" to={Routes.rickAndMorty.absolutePath}>
+            {Routes.rickAndMorty.label}
           </NavLink>
         </div>
       </div>
