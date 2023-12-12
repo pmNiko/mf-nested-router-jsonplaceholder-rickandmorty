@@ -1,23 +1,20 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { Routes } from "../router";
+import { Routes } from "../../router";
+import "./CardContainer.css";
 
 const CardContent = ({ pathname }: { pathname: string }) => {
   return (
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        marginTop: "2.5em",
+        textAlign: "center",
       }}
     >
       <h4>Microfrontend JSONPlaceholder</h4>
-      <NavLink
-        style={{ marginTop: "2em", marginBottom: "1em" }}
-        to={pathname + Routes.index.routerPath}
-      >
+      <NavLink to={pathname + Routes.index.routerPath}>
         {Routes.index.label}
       </NavLink>
+      <br />
+      <br />
       <nav
         style={{
           display: "flex",

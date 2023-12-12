@@ -1,65 +1,70 @@
-.container {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.menu {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  background-color: blueviolet;
-  height: 100%;
-  width: 20%;
-  padding-top: 1rem;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  /* height: 90vh;
+    width: 90%; */
+  height: 100vh;
+  /* outline: 3px solid black;
+  margin: 1em auto; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header  header  sidebar  sidebar   sidebar"
+    "main    main    main    main      main"
+    "main    main    main    main      main"
+    "main    main    main    main      main"
+    "main    main    main    main      main";
+}
+
+.grid__item {
+  font-size: 1rem;
   color: white;
-}
-
-.links {
-  margin: 2em;
   display: flex;
-  flex-direction: column;
-}
-
-.nav-links {
-  margin-top: 2em !important;
-  color: beige;
-  background-color: darkblue;
-
-  padding: 0.3em;
-}
-
-.nav-links:hover {
-  color: white;
-
-  box-shadow: 3px 4px 3px 2px rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
-  position: fixed;
-  background-color: blueviolet;
-  width: 80vw;
-  height: 3rem;
-  top: 0%;
-  right: 0%;
-  padding-top: 1em;
-  color: white;
+  background-color: rgb(146, 38, 38);
+  grid-area: header;
+  min-height: 50px;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0%;
-  right: 0%;
-  width: 80vw;
-  background-color: black;
-  color: aliceblue;
+.sidebar {
+  background-color: rgb(146, 38, 38, 0.95);
+  grid-area: sidebar;
+  min-height: 60px;
 }
-
 .main {
-  position: fixed;
-  right: 0%;
-  top: 8em;
-  width: 80%;
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.884);
+  grid-area: main;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 90vh;
+}
+
+@media (width <= 800px) {
+  .grid {
+    grid-template-areas:
+      "header  header  sidebar  sidebar   sidebar"
+      "main    main    main    main      main"
+      "main    main    main    main      main"
+      "main    main    main    main      main";
+  }
+}
+
+@media (width <= 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "header" "sidebar" "main" "footer";
+  }
 }

@@ -1,3 +1,3 @@
-import CardContent from "./CardContent";
+import CardContent from "./Navbar/CardContent";
 
 export { CardContent };
