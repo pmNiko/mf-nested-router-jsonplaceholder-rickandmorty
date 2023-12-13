@@ -1,11 +1,8 @@
 # Microfrontend Nested Router
 
-> [!NOTE]
->
-> **Sreenshots**
->
-> - Muestra del App Shell y los dos Microfrontend consumidos
-> - Cada uno tiene su enrutador propio
+<p align="center">
+    Sreenshots
+</p>
 
 <p align="center">
     <img alt="Shell" src="./images/shell.png" width="80%" />
