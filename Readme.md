@@ -17,10 +17,10 @@
 >
 > Ejecutar:
 >
-> - Instalación de dependencias :arrow_right: pnpm install
-> - App Shell :arrow_right: pnpm dev
-> - jsonplaceholder :arrow_right: pnpm run deploy
-> - rickandmorty :arrow_right: pnpm run deploy
+> - **Instalación de dependencias** :arrow_right: `pnpm install`
+> - **App Shell** :arrow_right: `pnpm dev`
+> - **jsonplaceholder** :arrow_right: `pnpm run deploy`
+> - **rickandmorty** :arrow_right: `pnpm run deploy`
 
 > [!TIP]
 > Optional information to help a user be more successful.
