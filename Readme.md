@@ -12,6 +12,16 @@
     <img alt="Shell" src="./images/rickandmorty.png" width="45%" />
 </p>
 
+---
+
+> [!NOTE]
+>
+> Objetivo
+>
+> Utilizar lo minimo indispensable para consumir un microfrontend con su propio enrutador.
+
+---
+
 > [!IMPORTANT]
 > Cada app contiene su propio archivo .env.local con las variables de entorno necesarias.
 >
@@ -20,6 +30,8 @@
 > - **jsonplaceholder** :arrow_right: `pnpm run deploy`
 > - **rickandmorty** :arrow_right: `pnpm run deploy`
 
+---
+
 > [!TIP]
 > Para mayor detalle acerca de la arquitectura microfrontend revisar el ejemplo y las wiki de los siguientes enlaces
 >
@@ -27,8 +39,27 @@
 >
 > - [mfe-parcel](https://github.com/pmNiko/mfe-parcel)
 
-> [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.
+---
 
 > [!CAUTION]
-> Negative potential consequences of an action.
+> Tener en cuenta
+>
+> - El root path del App Shell se utiliza como punto de referencia de los subenrutadores.
+> - El root path del App Shell es pasado como prop de los parcel para ser concatenados.
+> - Se usa el comodin **`*`** este ayuda en el reload de la app para no perder referencia.
+> - Se debe tener especial cuidado al utilizar hojas de estilo css.
+
+---
+
+<br/>
+
+---
+
+> [!NOTE]
+>
+> Tecnología implementada
+>
+> - **Vite**
+> - **React TS**
+> - **@originjs/vite-plugin-federation**
+> - **RRD-6.4**
