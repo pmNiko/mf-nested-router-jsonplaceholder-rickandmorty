@@ -2,7 +2,8 @@
 
 > [!NOTE]
 >
-> - Sreenshots
+> **Sreenshots**
+>
 > - Muestra del App Shell y los dos Microfrontend consumidos
 > - Cada uno tiene su enrutador propio
 
@@ -16,24 +17,26 @@
 
 > [!NOTE]
 >
-> Objetivo
+> **Objetivo**
 >
-> Utilizar lo minimo indispensable para consumir un microfrontend con su propio enrutador.
+> - Utilizar lo minimo indispensable para consumir un microfrontend con su propio enrutador.
 
 <br>
 
 > [!IMPORTANT]
-> Cada app contiene su propio archivo .env.local con las variables de entorno necesarias.
 >
-> - **Instalación de dependencias** :arrow_right: `pnpm install`
-> - **App Shell** :arrow_right: `pnpm dev`
-> - **jsonplaceholder** :arrow_right: `pnpm run deploy`
-> - **rickandmorty** :arrow_right: `pnpm run deploy`
+> **Dependencias**
+>
+> - _Dependencias_ :arrow_right: `pnpm install`
+> - _App Shell_ :arrow_right: `pnpm dev`
+> - _jsonplaceholder_ :arrow_right: `pnpm run deploy`
+> - _rickandmorty_ :arrow_right: `pnpm run deploy`
 
 <br>
 
 > [!TIP]
-> Para mayor detalle acerca de la arquitectura microfrontend revisar el ejemplo y las wiki de los siguientes enlaces
+>
+> **Recursos externos**
 >
 > - [mfe-shell](https://github.com/pmNiko/mfe-shell)
 >
@@ -41,9 +44,9 @@
 
 <br>
 
-> [!CAUTION]
-> Tener en cuenta
+> [!CAUTION] > **Tener en cuenta**
 >
+> - Cada app contiene su propio archivo .env.local con las variables de entorno necesarias.
 > - El root path del App Shell se utiliza como punto de referencia de los subenrutadores.
 > - El root path del App Shell es pasado como prop de los parcel para ser concatenados.
 > - Se usa el comodin **`*`** este ayuda en el reload de la app para no perder referencia.
@@ -53,9 +56,9 @@
 
 > [!NOTE]
 >
-> Tecnología implementada
+> **Tecnología implementada**
 >
-> - **Vite**
-> - **React TS**
-> - **@originjs/vite-plugin-federation**
-> - **RRD-6.4**
+> - _Vite_
+> - _React TS_
+> - _@originjs/vite-plugin-federation_
+> - _RRD 6.4_
