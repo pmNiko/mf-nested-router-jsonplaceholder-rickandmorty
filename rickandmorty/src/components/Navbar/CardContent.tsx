@@ -19,7 +19,10 @@ const CardContent = ({ pathname }: { pathname: string }) => {
       </h4>
 
       <div className="nav-links-placeholder">
-        <NavLink to={pathname + Routes.index.routerPath}>
+        <NavLink
+          className="custom-nav-link"
+          to={pathname + Routes.index.routerPath}
+        >
           {Routes.index.label}
         </NavLink>
         <br />
@@ -32,13 +35,22 @@ const CardContent = ({ pathname }: { pathname: string }) => {
             marginBottom: "2em",
           }}
         >
-          <NavLink to={pathname + Routes.characters.absolutePath}>
+          <NavLink
+            className="custom-nav-link"
+            to={pathname + Routes.characters.absolutePath}
+          >
             {Routes.characters.label}
           </NavLink>
-          <NavLink to={pathname + Routes.episodes.absolutePath}>
+          <NavLink
+            className="custom-nav-link"
+            to={pathname + Routes.episodes.absolutePath}
+          >
             {Routes.episodes.label}
           </NavLink>
-          <NavLink to={pathname + Routes.locations.absolutePath}>
+          <NavLink
+            className="custom-nav-link"
+            to={pathname + Routes.locations.absolutePath}
+          >
             {Routes.locations.label}
           </NavLink>
         </nav>

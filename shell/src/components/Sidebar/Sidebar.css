@@ -4,3 +4,7 @@
   text-decoration: none;
   font-size: small;
 }
+
+.custom-nav-link-active.active {
+  color: deepskyblue;
+}

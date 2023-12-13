@@ -5,15 +5,21 @@ import "./Sidebar.css";
 export const Sidebar = () => {
   return (
     <div className="links">
-      <NavLink className="nav-links" to={Routes.index.routerPath}>
+      <NavLink className="nav-links " to={Routes.index.routerPath}>
         {Routes.index.label}
       </NavLink>
 
-      <NavLink className="nav-links" to={Routes.jsonplaceholder.absolutePath}>
+      <NavLink
+        className="nav-links custom-nav-link-active"
+        to={Routes.jsonplaceholder.absolutePath}
+      >
         {Routes.jsonplaceholder.label}
       </NavLink>
 
-      <NavLink className="nav-links" to={Routes.rickAndMorty.absolutePath}>
+      <NavLink
+        className="nav-links custom-nav-link-active"
+        to={Routes.rickAndMorty.absolutePath}
+      >
         {Routes.rickAndMorty.label}
       </NavLink>
     </div>

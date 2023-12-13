@@ -1,15 +1,9 @@
-import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { PublicLayout } from "../layout/PublicLayout";
 import Home from "../pages/Home";
+import MFJSONPlaceholder from "../parcels/MFJSONPlaceholder";
+import MFRickAnndMorty from "../parcels/MFRickAnndMorty";
 import { Routes } from "./index";
-
-const RouterJSONPlaceholder = lazy(
-  () => import("mf-jsonplaceholder/RouterJSONPlaceholder")
-);
-const RickAndMortyRouter = lazy(
-  () => import("mf-rickandmorty/RickAndMortyRouter")
-);
 
 export const router = createBrowserRouter(
   [
@@ -23,19 +17,11 @@ export const router = createBrowserRouter(
         },
         {
           path: Routes.jsonplaceholder.routerPath,
-          element: (
-            <Suspense fallback={<p>Cargando...</p>}>
-              <RouterJSONPlaceholder pathname={Routes.index.routerPath} />,
-            </Suspense>
-          ),
+          element: <MFJSONPlaceholder />,
         },
         {
           path: Routes.rickAndMorty.routerPath,
-          element: (
-            <Suspense fallback={<p>Cargando...</p>}>
-              <RickAndMortyRouter pathname={Routes.index.routerPath} />,
-            </Suspense>
-          ),
+          element: <MFRickAnndMorty />,
         },
       ],
     },
