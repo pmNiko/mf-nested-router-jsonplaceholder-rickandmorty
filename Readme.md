@@ -44,7 +44,9 @@
 
 <br>
 
-> [!CAUTION] > **Tener en cuenta**
+> [!CAUTION]
+>
+> **Tener en cuenta**
 >
 > - Cada app contiene su propio archivo .env.local con las variables de entorno necesarias.
 > - El root path del App Shell se utiliza como punto de referencia de los subenrutadores.
