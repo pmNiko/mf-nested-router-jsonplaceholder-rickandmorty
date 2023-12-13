@@ -15,15 +15,17 @@
 > [!IMPORTANT]
 > Cada app contiene su propio archivo .env.local con las variables de entorno necesarias.
 >
-> Ejecutar:
->
 > - **Instalación de dependencias** :arrow_right: `pnpm install`
 > - **App Shell** :arrow_right: `pnpm dev`
 > - **jsonplaceholder** :arrow_right: `pnpm run deploy`
 > - **rickandmorty** :arrow_right: `pnpm run deploy`
 
 > [!TIP]
-> Optional information to help a user be more successful.
+> Para mayor detalle acerca de la arquitectura microfrontend revisar el ejemplo y las wiki de los siguientes enlaces
+>
+> [mfe-shell]("https://github.com/pmNiko/mfe-shell")
+>
+> [mfe-parcel]("https://github.com/pmNiko/mfe-parcel")
 
 > [!WARNING]
 > Critical content demanding immediate user attention due to potential risks.
