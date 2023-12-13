@@ -23,9 +23,9 @@
 > [!TIP]
 > Para mayor detalle acerca de la arquitectura microfrontend revisar el ejemplo y las wiki de los siguientes enlaces
 >
-> [mfe-shell]("https://github.com/pmNiko/mfe-shell")
+> - [mfe-shell]("https://github.com/pmNiko/mfe-shell")
 >
-> [mfe-parcel]("https://github.com/pmNiko/mfe-parcel")
+> - [mfe-parcel]("https://github.com/pmNiko/mfe-parcel")
 
 > [!WARNING]
 > Critical content demanding immediate user attention due to potential risks.
