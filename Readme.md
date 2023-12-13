@@ -12,7 +12,7 @@
     <img alt="Shell" src="./images/rickandmorty.png" width="45%" />
 </p>
 
----
+<br>
 
 > [!NOTE]
 >
@@ -20,7 +20,7 @@
 >
 > Utilizar lo minimo indispensable para consumir un microfrontend con su propio enrutador.
 
----
+<br>
 
 > [!IMPORTANT]
 > Cada app contiene su propio archivo .env.local con las variables de entorno necesarias.
@@ -30,7 +30,7 @@
 > - **jsonplaceholder** :arrow_right: `pnpm run deploy`
 > - **rickandmorty** :arrow_right: `pnpm run deploy`
 
----
+<br>
 
 > [!TIP]
 > Para mayor detalle acerca de la arquitectura microfrontend revisar el ejemplo y las wiki de los siguientes enlaces
@@ -39,7 +39,7 @@
 >
 > - [mfe-parcel](https://github.com/pmNiko/mfe-parcel)
 
----
+<br>
 
 > [!CAUTION]
 > Tener en cuenta
@@ -49,11 +49,7 @@
 > - Se usa el comodin **`*`** este ayuda en el reload de la app para no perder referencia.
 > - Se debe tener especial cuidado al utilizar hojas de estilo css.
 
----
-
-<br/>
-
----
+<br>
 
 > [!NOTE]
 >
