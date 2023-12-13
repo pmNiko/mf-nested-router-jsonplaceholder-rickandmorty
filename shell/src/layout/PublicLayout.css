@@ -36,19 +36,20 @@ body {
 .header {
   background-color: rgb(146, 38, 38);
   grid-area: header;
-  min-height: 50px;
+  min-height: 30px;
 }
 
 .sidebar {
   background-color: rgb(146, 38, 38, 0.95);
   grid-area: sidebar;
-  min-height: 60px;
+  min-height: 30px;
 }
 .main {
-  background-color: rgba(0, 0, 0, 0.884);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   grid-area: main;
+  margin-top: 2vh;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 70vh;
 }
 
 @media (width <= 800px) {

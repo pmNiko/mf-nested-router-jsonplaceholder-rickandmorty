@@ -2,7 +2,7 @@ import { CharacterResponse } from "../../interfaces/Rick&MortyApi/Caracters";
 import { useGetRickAndMorty } from "./commons";
 
 export const useGetCharacters = async (offset: number = 0) => {
-  const quantity = 12;
+  const quantity = 10;
   const start = offset * quantity + 1;
   const limit = quantity + start;
 

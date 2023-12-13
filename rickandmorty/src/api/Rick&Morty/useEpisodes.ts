@@ -2,7 +2,7 @@ import { EpisodeResponse } from "../../interfaces/Rick&MortyApi/Episodes";
 import { useGetRickAndMorty } from "./commons";
 
 export const useGetEpisodes = async (offset: number = 0) => {
-  const quantity = 12;
+  const quantity = 8;
   const start = offset * quantity + 1;
   const limit = quantity + start;
 

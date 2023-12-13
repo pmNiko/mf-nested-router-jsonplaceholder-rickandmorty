@@ -32,17 +32,14 @@ const CardContent = ({ pathname }: { pathname: string }) => {
             marginBottom: "2em",
           }}
         >
-          <NavLink to={pathname + Routes.todos.absolutePath}>
-            {Routes.todos.label}
+          <NavLink to={pathname + Routes.characters.absolutePath}>
+            {Routes.characters.label}
           </NavLink>
-          <NavLink to={pathname + Routes.posts.absolutePath}>
-            {Routes.posts.label}
+          <NavLink to={pathname + Routes.episodes.absolutePath}>
+            {Routes.episodes.label}
           </NavLink>
-          <NavLink to={pathname + Routes.comments.absolutePath}>
-            {Routes.comments.label}
-          </NavLink>
-          <NavLink to={pathname + Routes.users.absolutePath}>
-            {Routes.users.label}
+          <NavLink to={pathname + Routes.locations.absolutePath}>
+            {Routes.locations.label}
           </NavLink>
         </nav>
       </div>

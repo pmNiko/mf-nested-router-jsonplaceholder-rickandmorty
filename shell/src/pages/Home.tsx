@@ -1,12 +1,9 @@
 const Home = () => {
   return (
-    <div style={{ marginTop: "1em" }}>
+    <div style={{ marginTop: "1em", color: "black" }}>
       <h4 style={{ marginTop: "1em", marginBottom: "1em" }}>Nested Router</h4>
 
-      <p>
-        En esta aplicación de muestra podemos ver como trabajan tres Microfront
-        end con sus propios router
-      </p>
+      <p>Home del App Shell encargado de contener dos Micro Frontend</p>
 
       <section
         style={{
@@ -14,16 +11,17 @@ const Home = () => {
           display: "flex",
           justifyContent: "space-evenly",
           marginTop: "3em",
+          gap: 50,
         }}
       >
         <img
           width={"250px"}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL5-4VxpEnW28Bux5jpEovI4CJkK0BDab69c3_dgDU-gz-ZbknS5MwaDuHbr5TqiHRj10&usqp=CAU"
+          src="https://apilist.fun/images/social/api/jsonplaceholder.png"
           alt="jsonplacholder"
         />
         <img
           width={"250px"}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR09C5OJRR3IFCkB7HE-VSPaz_-lE2MRah3WnETU7gG_pK3DAqxqPUnqijP0vDSbRdVnNc&usqp=CAU"
+          src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-ruefers-deviantart-22.png"
           alt="rickandmorty"
         />
       </section>

@@ -1,7 +1,11 @@
 export default () => {
   return (
-    <div style={{ width: "40%", margin: "auto" }}>
-      <h4>Home del MF Rick And Morty</h4>
+    <div style={{ width: "40%", margin: "auto", color: "black" }}>
+      <img
+        width={"250px"}
+        src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-ruefers-deviantart-22.png"
+        alt="rickandmorty"
+      />
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nostrum
